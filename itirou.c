@@ -1,6 +1,7 @@
 #include <stdio.h>
 #define MAP_SIZE 5
 
+
 int main(){
     int px = 0;
     int py=4;
