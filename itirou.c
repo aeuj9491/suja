@@ -45,7 +45,7 @@ void movePlayer(int map[MAP_SIZE][MAP_SIZE], Player *p, char input) {
 
     int target = map[nY][nX];
     if (target == 1) {
-        printf("\a"); 
+        printf("壁には進めません"); 
     } else if (target == 4 && p->hasKey == 0) {
         printf("\n>> 扉が閉まっている！鍵が必要だ。\n");
     } else {
