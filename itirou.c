@@ -13,7 +13,7 @@ void drawMap(int map[MAP_SIZE][MAP_SIZE], Player p) {
     
     printf("\n========== 脱出迷路10x10 ==========\n");
     printf(" [P]:自分  [K]:鍵  [D]:扉  [G]:ゴール  [#]:壁\n");
-    if (p.hasKey) {
+    if (p.hasKey == 1) {
     printf(" 状態: 【鍵を所持！】\n");
     } else {
         printf(" 状態:   鍵を探せ \n");
