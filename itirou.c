@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// 1. サイズを10に拡大
+
 #define MAP_SIZE 10
 
 typedef struct {
@@ -10,7 +10,7 @@ typedef struct {
 } Player;
 
 void drawMap(int map[MAP_SIZE][MAP_SIZE], Player p) {
-    // 画面をスッキリさせるため少し改行を入れる
+    
     printf("\n========== 脱出迷路10x10 ==========\n");
     printf(" [P]:自分  [K]:鍵  [D]:扉  [G]:ゴール  [#]:壁\n");
     printf(" 状態: %s\n", p.hasKey ? "【鍵を所持！】" : "  鍵を探せ ");
@@ -41,7 +41,7 @@ void movePlayer(int map[MAP_SIZE][MAP_SIZE], Player *p, char input) {
 
     int target = map[nY][nX];
     if (target == 1) {
-        printf("\a"); // ビープ音（鳴らない環境もあります）
+        printf("\a"); 
     } else if (target == 4 && p->hasKey == 0) {
         printf("\n>> 扉が閉まっている！鍵が必要だ。\n");
     } else {
