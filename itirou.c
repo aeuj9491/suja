@@ -43,18 +43,18 @@ void movePlayer(int map[MAP_SIZE][MAP_SIZE], Player *p, char input) {
 
     if (nX < 0 || nX >= MAP_SIZE || nY < 0 || nY >= MAP_SIZE) return;
 
-    int target = map[nY][nX];
-    if (target == 1) {
+    int next = map[nY][nX];
+    if (next == 1) {
         printf("壁には進めません"); 
-    } else if (target == 4 && p->hasKey == 0) {
+    } else if (next == 4 && p->hasKey == 0) {
         printf("\n>> 扉が閉まっている！鍵が必要だ。\n");
     } else {
         p->x = nX; p->y = nY;
-        if (target == 3) {
+        if (next == 3) {
             printf("\n>> 鍵を手に入れた！扉が開けられるぞ。\n");
             p->hasKey = 1;
             map[p->y][p->x] = 0;
-        } else if (target == 4) {
+        } else if (next == 4) {
             printf("\n>> 鍵を使って扉を開放した！\n");
             map[p->y][p->x] = 0;
         }
